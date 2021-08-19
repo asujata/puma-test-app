@@ -1,5 +1,7 @@
 require 'sinatra'
 
 get '/' do
-  'Hello world! Test 123'
+  require 'socket'
+  hostname = Socket.gethostname
+  "hostname: #{hostname}"
 end
